@@ -13,14 +13,14 @@
 
         <label for="cantidad">Cantidad</label>
         <input type="number" id="cantidad" name="cantidad" placeholder="Cantidad en kilogramos">
+        
         <br>
 
         <label for="calidad">Calidad</label>
-        <select id="calidad" name="calidad">
-            <option value="1">1-Calidad primera - Extra</option>
-            <option value="2">2-Segunda</option>
-            <option value="3">3-Muestra</option>
+        <select name="calidad" id="calidad">
+            <?php include("includes/selectCalidad.php") ?>
         </select>
+
 
         <label for="brix">Brix</label>
         <input type="number" id="brix" name="brix" placeholder="brix">
@@ -28,26 +28,24 @@
 
         <label for="proveedor">Proveedor</label>
         <select name="proveedor" id="proveedor">
-        <?php
-            include("db.php");
-            $getProveedores1 = "select * from proveedores order by id_proveedor";
-            $getProveedores2 = mysqli_query($conn, $getProveedores1);
-            while($row = mysqli_fetch_array($getProveedores2))
-            {
-                $id_proveedor = $row['id_proveedor'];
-                $nombre = $row['nombre'];
-                ?> 
-                <option value="<?php echo $id_proveedor;?>"><?php echo $nombre;?></option>
-                <?php
-            }
-        ?>
-        <!--<input type="number" id="proveedor" name="proveedor" placeholder="proveedor">-->
+            <?php include("includes/selectProveedor.php") ?>
         </select>
 
         <input type="submit" name="save_register" value="Agregar">
     </form>
 </div>
-<div class="registros">
 
+<div class="registros">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Materia prima</th>
+                <th>Cantidad</th>
+                <th>Calidad</th>
+                <th>Brix</th>
+                <th>Proveedor</th>
+        </thead>
+    </table>
 </div>
 <?php include("includes/footer.php") ?>

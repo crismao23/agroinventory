@@ -3,16 +3,17 @@
     if (isset($_POST['save_register'])){
         $materia_prima = $_POST['materia_prima'];
         $calidad = $_POST['calidad'];
-        $proveedor = $_POST['proveedor'];
         $cantidad = $_POST['cantidad'];
+        $proveedor = $_POST['proveedor'];
         $brix = $_POST['brix'];
-        $query = "INSERT INTO registros(materia_prima, cantidad, calidad, brix, proveedor) 
-                                VALUES ('$materia_prima', '$cantidad', '$calidad', '$brix', '$proveedor')";
+        $realizo = $_POST['realizo'];
+        $query = "INSERT INTO registros(realizo, materia_prima, cantidad, calidad, brix, proveedor) 
+                                VALUES ( '$realizo','$materia_prima', '$cantidad', '$calidad', '$brix', '$proveedor')";
 
         $result = mysqli_query($conn, $query);
         if (!$result) {
             die("query fail");
         }
-        echo 'guardado';
+        header("Location: index.php");
     }
 ?>

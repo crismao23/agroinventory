@@ -1,3 +1,13 @@
+body {
+  text-align: center;
+  font-family: 'Big Shoulders Stencil Display', cursive;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:rgb(163, 167, 170) ;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -5,8 +15,15 @@ ul {
     overflow: hidden;
     background-color: #333;
 }
+nav{
+  margin: 0;
+  padding: 0;
+}
 li {
-    float: left;
+    float: right;
+}
+.logo {
+  float: left;
 }
 li a {
     display: block;
@@ -20,33 +37,96 @@ li a:hover {
 }
 
 /*formulario*/
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
+input, select {
+  width: 100%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
   
-  input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+input[type=submit] {
+  width: 50%;
+  background-color: #4553a0;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 28px;
+}
   
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
+input[type=submit]:hover {
+  background-color: #4553a0;
+  font-size: 30px;
+}
+
+input[type=button] {
+  width: 40%;
+  background-color: #ee4908;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 28px;
+}
   
-  .formulario {
+input[type=button]:hover {
+  background-color: #ee4908;
+  font-size: 30px;
+}
+
+button{
+  background-color: #4553a0;
+  font-size: 30px;
+}
+
+.formulario {
     border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  }
+    display: inline-block;
+    background-color: #f2f2f28e;
+    padding: 1%;
+    width: 45%;
+    margin: 1%;
+    vertical-align:top;
+}
+
+.registros {
+  align-items: center;
+  border-radius: 5px;
+  background-color: #f2f2f28e;
+  padding: 1%;
+  margin: 1%;
+}
+
+table {
+    width: 99%;
+    border-collapse: collapse;
+}
+
+a {
+  font-size: 150%;
+  text-decoration: none;
+  color: rgb(56, 54, 54);
+}
+
+h1{
+  padding-top: 5%;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}

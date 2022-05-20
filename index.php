@@ -179,7 +179,7 @@
             if ($dia == null){
                 $dia = " ";
             }else{
-                $dia ="AND day(fecha_ingreso) = $dia";
+                $dia =" AND day(fecha_ingreso) = $dia";
             }
             if ($prov == null){
                 $prov = " ";
